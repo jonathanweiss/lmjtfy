@@ -62,6 +62,7 @@
   search_submitted = function() {
     $('#search_query').value = _.string.trim($('#search_query').val());
     if ($('#search_query').val()) {
+      location = $('#search').attr('action') + '?searchString=' + $('#search_query').val()
       return $("#search_url").html(location.href + '?s=' + $('#search_query').val());
     }
   };
